@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Medicare</title>
+</head>
+<body>
+  <div class="container">
+    <h2>Doctor Registration Form</h2>
+    <form action="/doctors/register" method="post">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" >
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" name="email" >
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="text" class="form-control" name="phone">
+      </div>
+      <div class="form-group">
+        <label for="specialization">Specialization:</label>
+        <select class="form-control" name="specialization">
+          <option value="">Select specialization</option>
+          <option value="cardiology">Cardiology</option>
+          <option value="dermatology">Dermatology</option>
+          <option value="endocrinology">Endocrinology</option>
+          <!-- Add more options here -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="experience">Experience (in years):</label>
+        <input type="number" class="form-control" name="experience">
+      </div>
+      <div class="form-group">
+        <label for="bio">Bio:</label>
+        <textarea class="form-control" name="bio" placeholder="Enter a brief bio"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</body>

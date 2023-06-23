@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Doctor Registration Form</title>
+</head>
+<body>
+  <div class="container">
+    <h2>Doctor Registration Form</h2>
+    <form action="/doctors/update" method="POST">
+      <div class="form-group">
+        <label for="id">Doctor Id:</label>
+        <input type="hidden" class="form-control" name="id" value="${doctor.id}"  >
+      </div>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" name="name" value="${doctor.name}"  >
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" name="email" value="${doctor.email}" >
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="text" class="form-control" name="phone" value="${doctor.phone}" >
+      </div>
+      <!-- <div class="form-group">
+        <label for="specialization">Specialization:</label>
+        <select class="form-control" id="specialization" value="${doctor.specialization}">
+          <option value="">Select specialization</option>
+          <option value="cardiology">Cardiology</option>
+          <option value="dermatology">Dermatology</option>
+          <option value="endocrinology">Endocrinology</option>
+          Add more options here
+        </select>
+      </div> -->
+      <div class="form-group">
+        <label for="experience">Experience (in years):</label>
+        <input type="number" class="form-control" name="experience" value="${doctor.experience}">
+      </div>
+     <!--  <div class="form-group">
+        <label for="bio">Bio:</label>
+        <textarea class="form-control" id="bio" value="${doctor.bio}" placeholder="Enter a brief bio"></textarea>
+      </div> -->
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</body>

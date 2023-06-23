@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Add any necessary CSS styles for doctor details */
+    .doctor-details {
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .doctor-info p {
+      margin: 0;
+    }
+
+    .doctor-info p strong {
+      font-weight: bold;
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      height: 100%;
+    }
+
+    .left-panel {
+      flex: 0 0 30%;
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
+
+    .right-panel {
+      flex: 0 0 70%;
+      background-color: #e9e9e9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .details-box {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .details-box a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .details-box a:hover {
+      text-decoration: underline;
+      
+    }
+    .dashboard-message{
+    	font-size:xxx-large;
+    	font-weight:bold;
+    }
+  </style>
+  <script>
+  $(document).ready(function() {
+    // Load doctor details when clicking on "Doctor Details" link
+    $('.details-box a[href="appointment-detailsp.html"]').click(function(event) {
+      event.preventDefault(); // Prevent the default link behavior
+      $('.right-panel').load('appointment-detailsp.html');
+    });
+  });
+</script>
+    
+</head>
+<body>
+<div class="container">
+    <div class="left-panel">
+      <div class="details-box">
+        <a href="docp.html" >Doctor Details</a>
+      </div>
+      <div class="details-box">
+        <a href="appointment-detailsp.html">Appointment Details</a>
+      </div>
+      <div class="details-box">
+        <a href="patient-details.html">Patient Details</a>
+      </div>
+      <div class="details-box">
+        <a href="receptionist-details.html">Reception Details</a>
+      </div>
+      <div class="details-box">
+        <a href="nurse-details.html">Nurse Details</a>
+      </div>
+      <div class="details-box">
+        <a href="medicine-details.html">Medicine Details</a>
+      </div>
+    </div>
+    <div class="right-panel">
+      <div class="doctor-details">
+    <h1>Doctor Details</h1>
+    <div class="doctor-info">
+      <p><strong>Name:</strong> Dr. John Doe</p>
+      <p><strong>Age:</strong> 35</p>
+      <p><strong>Role:</strong> Cardiologist</p>
+    </div>
+  </div>
+    </div>
+  </div>
+  
+</body>
+</html>
